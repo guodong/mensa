@@ -1,0 +1,22 @@
+
+
+<div class="window-layout" [style.display]="window.bare?'none':'block'">
+  <div class="top-row">
+    <div class="top">
+      <div class="buttons">
+        <div class="close" (click)="close()">✖</div>
+        <div class="maximize" *ngIf="window.maximizable" (click)="toggleMaximize()">□</div>
+        <div class="minimize" *ngIf="window.minimizable" (click)="minimize()">-</div>
+      </div>
+      <div class="title">{{window.title}}</div>
+    </div>
+  </div>
+
+  <div class="content-row">
+    <div class="content" *ngIf="!window.src" [innerHTML]="window.content"></div>
+    <iframe *ngIf="window.src" [src]="window.src" frameBorder="0" width="100%" height="100%"></iframe>
+  </div>
+
+</div>
+
+<canvas #canvas width="1" height="1"></canvas>

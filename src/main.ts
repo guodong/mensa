@@ -8,4 +8,4 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+setTimeout(function() { platformBrowserDynamic().bootstrapModule(AppModule);}, 5000);

@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SystemConfigService} from "./system-config.service";
+import {AppManagerService} from "./app-manager.service";
 
 @Component({
-  selector: 'app-root',
+  selector: 'body',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  constructor(private scService: SystemConfigService, private appManagerService: AppManagerService) {
+  }
+
+  ngOnInit(): void {
+    var me = this;
+    me.appManagerService.install('/apps/about');
+  }
 }

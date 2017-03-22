@@ -67,7 +67,7 @@ export class Process {
     var me = this;
     var iceServer = {
       "iceServers": [{
-        "url": "turn:106.75.71.14:3478?transport=udp",
+        "url": "turn:turn.cloudwarehub.com:3478?transport=udp",
         "username": "gd",
         "credential": "gd"
       }]

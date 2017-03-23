@@ -47,7 +47,7 @@ export class ProcessManagerService {
       setTimeout(function () { // wait for datachannel in order to bind dc onmessage function
         me.processes.push(process);
         me.activeProcess(process);
-      }, 2000);
+      }, 0);
     });
   }
 

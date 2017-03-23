@@ -77,6 +77,7 @@ export class Process {
     var socket = me.signal;
     var dc = pc.createDataChannel("event channel");
     me.dc = dc;
+    dc.onmessage = me.cb;
 
     pc.onicecandidate = function (event) {
       if (event.candidate !== null) {
@@ -110,7 +111,7 @@ export class Process {
     };
 
     var sendOfferFn = function (desc: any) {
-      desc.sdp = me.setBandwidth(desc.sdp, 50, 4500);
+      //desc.sdp = me.setBandwidth(desc.sdp, 50, 4500);
       pc.setLocalDescription(desc);
       //setTimeout(function () {
         socket.send(JSON.stringify(desc));

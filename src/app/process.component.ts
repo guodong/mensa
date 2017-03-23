@@ -26,7 +26,7 @@ export class ProcessComponent implements OnInit {
 
     this.zone = new NgZone({enableLongStackTrace: false});
     me.process.windows = me.windows;
-    me.process.dc.onmessage = function (event) {
+    me.process.cb = function (event) {
       console.log(event.data);
       var msg = JSON.parse(event.data);
       var payload = msg.payload;

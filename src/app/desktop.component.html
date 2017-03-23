@@ -7,3 +7,8 @@
 </ul>
 <taskbar (notify)='onStartmenuClick($event)'></taskbar>
 <process *ngFor="let process of processes" [process]="process" id="proc-{{process.pid}}"></process>
+<div class="loading-mask" id="loading-mask">
+  <p>Loading...</p>
+  <canvas id="loadingcanvas" width="300" height="300"></canvas>
+</div>
+

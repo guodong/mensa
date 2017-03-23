@@ -32,6 +32,10 @@ export class ProcessManagerService {
 
   runApp(app: App) {
     var me = this;
+    document.getElementById('loading-mask').style.display = 'block';
+    setTimeout(function () {
+      document.getElementById('loading-mask').style.display = 'none';
+    }, 3500);
     var port = me.randomIntFromInterval(10000, 30000);
     var display = me.randomIntFromInterval(10, 10000);
     //var cmd = 'sudo docker run -ti -d --net host --privileged -e DISPLAY=:' + display + ' -e PORT=' + port + ' -e APP=gedit cloudwarehouse/demo';

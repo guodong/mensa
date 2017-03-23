@@ -28,6 +28,31 @@ export class DesktopComponent implements OnInit {
 
   ngOnInit() {
     var me = this;
+    var cloudbg = new Image();
+    cloudbg.src = '/assets/images/cloudware-logo-bg.png';
+    var cloud = new Image();
+    cloud.src = '/assets/images/cloudware-logo-cloud.png';
+
+    function draw() {
+      var canvas = <HTMLCanvasElement>document.getElementById('loadingcanvas');
+      if (!canvas) {
+        return;
+      }
+      //canvas.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+      var ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, 300, 300);
+      ctx.save();
+      ctx.translate(150, 150);
+      var time = new Date();
+      ctx.rotate(((8 * Math.PI) / 60) * time.getSeconds() + ((8 * Math.PI) / 60000) * time.getMilliseconds());
+      ctx.drawImage(cloudbg, -150, -150, 300, 300);
+
+      ctx.restore();
+      ctx.drawImage(cloud, 0, 0, 300, 300);
+      window.requestAnimationFrame(draw);
+    }
+
+    window.requestAnimationFrame(draw);
     me.scService.setBackground('http://pic1.win4000.com/wallpaper/0/54126aa38537b.jpg');
     me.apps = me.amService.apps;
     me.processes = me.pmService.getProcesses();

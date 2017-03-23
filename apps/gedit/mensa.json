@@ -1,5 +1,5 @@
 {
-  "name": "About",
+  "name": "Gedit",
   "description": "",
   "version": "0.0.1",
   "authors": [
@@ -7,5 +7,6 @@
   ],
   "license": "ISC",
   "icon": "icon.png",
-  "entry": "entry.js"
+  "entry": "entry.js",
+  "cloudware": "gedit"
 }

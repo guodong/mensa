@@ -34,7 +34,8 @@ export class ProcessManagerService {
     var me = this;
     var port = me.randomIntFromInterval(10000, 30000);
     var display = me.randomIntFromInterval(10, 10000);
-    var cmd = 'sudo docker run -ti -d --net host --privileged -e DISPLAY=:' + display + ' -e PORT=' + port + ' -e APP=gedit cloudwarehouse/demo';
+    //var cmd = 'sudo docker run -ti -d --net host --privileged -e DISPLAY=:' + display + ' -e PORT=' + port + ' -e APP=gedit cloudwarehouse/demo';
+    var cmd = app.cloudware;
     me.sessService.send('run', cmd, function (resp) { // response is signal service token
       var process = new Process({
         pid: me.pid++,

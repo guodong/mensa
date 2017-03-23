@@ -32,7 +32,8 @@ export class AppManagerService {
       name: appconfig.name,
       config: appconfig,
       logo: url + '/' + 'icon.png',
-      entry: url + '/' + appconfig.entry
+      entry: url + '/' + appconfig.entry,
+      cloudware: appconfig.cloudware
     });
     me.apps.push(app);
   }

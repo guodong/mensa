@@ -14,6 +14,7 @@ export class AppComponent {
 
   ngOnInit(): void {
     var me = this;
-    me.appManagerService.install('/apps/about');
+    me.appManagerService.install('/apps/gedit');
+    me.appManagerService.install('/apps/matlab');
   }
 }

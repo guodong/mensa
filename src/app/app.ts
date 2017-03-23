@@ -6,6 +6,7 @@ export class App {
   logo: string;
   name: string;
   entry: string;
+  cloudware: string;
 
   constructor(args: any) {
     for (var i in args) {

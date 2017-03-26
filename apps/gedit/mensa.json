@@ -8,5 +8,6 @@
   "license": "ISC",
   "icon": "icon.png",
   "entry": "entry.js",
-  "cloudware": "daocloud.io/guodong/pulsar:latest"
+  "cloudware": "daocloud.io/guodong/pulsar:latest",
+  "dockerImage": "daocloud.io/guodong/pulsar:latest"
 }

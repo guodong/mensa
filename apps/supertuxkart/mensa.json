@@ -8,5 +8,5 @@
   "license": "ISC",
   "icon": "icon.png",
   "entry": "entry.js",
-  "cloudware": "supertuxkart"
+  "cloudware": "daocloud.io/guodong/supertuxkart:latest"
 }

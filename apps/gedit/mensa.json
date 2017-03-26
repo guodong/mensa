@@ -8,5 +8,5 @@
   "license": "ISC",
   "icon": "icon.png",
   "entry": "entry.js",
-  "cloudware": "gedit"
+  "cloudware": "daocloud.io/guodong/pulsar:latest"
 }

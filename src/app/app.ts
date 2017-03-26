@@ -7,6 +7,7 @@ export class App {
   name: string;
   entry: string;
   cloudware: string;
+  dockerImage: string;
 
   constructor(args: any) {
     for (var i in args) {

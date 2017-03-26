@@ -8,5 +8,5 @@
   "license": "ISC",
   "icon": "icon.png",
   "entry": "entry.js",
-  "cloudware": "matlab"
+  "cloudware": "daocloud.io/guodong/matlab-pulsar:latest"
 }

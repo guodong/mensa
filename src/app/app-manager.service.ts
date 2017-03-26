@@ -33,7 +33,8 @@ export class AppManagerService {
       config: appconfig,
       logo: url + '/' + 'icon.png',
       entry: url + '/' + appconfig.entry,
-      cloudware: appconfig.cloudware
+      cloudware: appconfig.cloudware,
+      dockerImage: appconfig.dockerImage
     });
     me.apps.push(app);
   }

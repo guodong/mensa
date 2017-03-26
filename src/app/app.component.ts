@@ -18,5 +18,6 @@ export class AppComponent {
     me.appManagerService.install('/apps/matlab');
     me.appManagerService.install('/apps/supertuxkart');
     me.appManagerService.install('/apps/thunar');
+    me.appManagerService.install('/apps/librecad');
   }
 }

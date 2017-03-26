@@ -36,7 +36,7 @@ export class ProcessComponent implements OnInit {
             case 'create':
 
               var opts = {
-                id: payload.id,
+                id: me.process.pid + '-' + payload.id,
                 title: 'window',
                 x: payload.x || 0,
                 y: payload.y || 0,
@@ -55,7 +55,7 @@ export class ProcessComponent implements OnInit {
               });
               break;
             case 'show':
-              var window = me.wmService.getWindowById(payload.id);
+              var window = me.wmService.getWindowById(me.process.pid + '-' + payload.id);
               if (window) {
                 me.zone.run(() => {
                   me.wmService.showWindow(window);
@@ -63,7 +63,7 @@ export class ProcessComponent implements OnInit {
               }
               break;
             case 'hide':
-              var window = me.wmService.getWindowById(payload.id);
+              var window = me.wmService.getWindowById(me.process.pid + '-' + payload.id);
               if (window) {
                 me.zone.run(() => {
                   window.hide()
@@ -71,7 +71,7 @@ export class ProcessComponent implements OnInit {
               }
               break;
             case 'configure':
-              var window = me.wmService.getWindowById(payload.id);
+              var window = me.wmService.getWindowById(me.process.pid + '-' + payload.id);
               if (window) {
                 me.zone.run(() => {
                   window.configure(payload);
@@ -80,7 +80,7 @@ export class ProcessComponent implements OnInit {
 
               break;
             case 'destroy':
-              var window = me.wmService.getWindowById(payload.id);
+              var window = me.wmService.getWindowById(me.process.pid + '-' + payload.id);
               if (window) {
                 me.zone.run(() => {
                   me.wmService.destroyWindow(window);

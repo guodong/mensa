@@ -4,6 +4,7 @@ import {Window} from './window';
 import {WmService} from './wm.service';
 
 export class Process {
+  pid: number;
   screen: any;
   app: App;
   worker: Worker;

@@ -19,5 +19,11 @@ export class AppComponent {
     me.appManagerService.install('/apps/supertuxkart');
     me.appManagerService.install('/apps/thunar');
     me.appManagerService.install('/apps/librecad');
+    me.appManagerService.install('/apps/bluefish');
+    me.appManagerService.install('/apps/eclipse');
+    me.appManagerService.install('/apps/codeblocks');
+    me.appManagerService.install('/apps/netbeans');
+    me.appManagerService.install('/apps/sudoku');
+    me.appManagerService.install('/apps/gnumeric');
   }
 }

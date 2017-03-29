@@ -16,6 +16,7 @@ export class AppComponent {
     var me = this;
     me.appManagerService.install('/apps/gedit');
     me.appManagerService.install('/apps/matlab');
+    me.appManagerService.install('/apps/rstudio');
     me.appManagerService.install('/apps/supertuxkart');
     me.appManagerService.install('/apps/thunar');
     me.appManagerService.install('/apps/librecad');

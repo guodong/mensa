@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mensa</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body oncontextmenu="return false;">
+<div class="preload">
+  <div class="band">
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <div class="slogan">CloudwareHub</div>
+    <div class="slogan">开启云时代软件新体验</div>
+  </div>
+</div>
+<script>
+  var cloudbg = new Image();
+  cloudbg.src = '/assets/images/cloudware-logo-bg.png';
+  var cloud = new Image();
+  cloud.src = '/assets/images/cloudware-logo-cloud.png';
+
+  function draw() {
+    var canvas = document.getElementById('canvas');
+    if (!canvas) {
+      return;
+    }
+    //canvas.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, 300, 300);
+    ctx.save();
+    ctx.translate(150, 150);
+    var time = new Date();
+    ctx.rotate(((8 * Math.PI) / 60) * time.getSeconds() + ((8 * Math.PI) / 60000) * time.getMilliseconds());
+    ctx.drawImage(cloudbg, -150, -150, 300, 300);
+
+    ctx.restore();
+    ctx.drawImage(cloud, 0, 0, 300, 300);
+    window.requestAnimationFrame(draw);
+  }
+
+  window.requestAnimationFrame(draw);
+  var images = [];
+  function preload() {
+    for (var i = 0; i < preload.arguments.length; i++) {
+      images[i] = new Image();
+      images[i].src = preload.arguments[i]
+    }
+  }
+  preload(
+    //"http://cloudwarehub.com/assets/images/windows7-bg.jpg"
+  )
+</script>
+<script>
+
+
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260768865'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260768865' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>

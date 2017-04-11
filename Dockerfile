@@ -1,2 +1,3 @@
-FROM node:7-onbuild
-EXPOSE 4200
+FROM nginx
+ADD default.conf /etc/nginx/conf.d/default.conf
+ADD dist /usr/share/nginx/html

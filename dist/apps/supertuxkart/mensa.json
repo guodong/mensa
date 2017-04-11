@@ -1,0 +1,13 @@
+{
+  "name": "Supertuxkart",
+  "description": "",
+  "version": "0.0.1",
+  "authors": [
+    "guodong <gd@tongjo.com>"
+  ],
+  "license": "ISC",
+  "icon": "icon.png",
+  "entry": "entry.js",
+  "cloudware": "daocloud.io/guodong/supertuxkart:latest",
+  "dockerImage": "daocloud.io/guodong/supertuxkart:latest"
+}

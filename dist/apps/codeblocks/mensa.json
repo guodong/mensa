@@ -1,0 +1,12 @@
+{
+  "name": "Codeblocks",
+  "description": "",
+  "version": "0.0.1",
+  "authors": [
+    "guodong <gd@tongjo.com>"
+  ],
+  "license": "ISC",
+  "icon": "icon.png",
+  "entry": "entry.js",
+  "dockerImage": "daocloud.io/guodong/codeblocks:latest"
+}
